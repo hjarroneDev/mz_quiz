@@ -3,9 +3,15 @@ import 'package:flutter/material.dart';
 import 'widgets/Menu Bar/menu_bar.dart';
 import 'widgets/User/login_register.dart';
 
-class MenuGeral extends StatelessWidget {
+class MenuGeral extends StatefulWidget {
+  
   const MenuGeral({Key? key}) : super(key: key);
 
+  @override
+  State<MenuGeral> createState() => _MenuGeralState();
+}
+
+class _MenuGeralState extends State<MenuGeral> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -16,11 +22,18 @@ class MenuGeral extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage("assets/images/6kd9jw.png"),
               fit: BoxFit.cover)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: const [
-          MenuBar(),
-          UserForm(),
+      child: Stack(
+        alignment: AlignmentDirectional.topEnd,
+        children: [
+          Column(
+            children: const [
+              MenuBar(),
+            ],
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 60),
+            child: UserForm(),
+          ),
         ],
       ),
     );

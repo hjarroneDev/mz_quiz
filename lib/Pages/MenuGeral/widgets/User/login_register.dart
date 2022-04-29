@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class UserForm extends StatefulWidget {
-  const UserForm({Key? key}) : super(key: key);
+  const UserForm({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<UserForm> createState() => _UserFormState();
 }
 
 class _UserFormState extends State<UserForm> {
-  var visivel = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -61,7 +62,7 @@ class _UserFormState extends State<UserForm> {
               ),
               Center(
                 child: SizedBox(
-                  height: 40,
+                  height: 35,
                   width: 300,
                   child: TextField(
                     style: GoogleFonts.roboto(
@@ -90,7 +91,7 @@ class _UserFormState extends State<UserForm> {
                 height: 15,
               ),
               SizedBox(
-                height: 35,
+                height: 40,
                 width: 300,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -98,7 +99,7 @@ class _UserFormState extends State<UserForm> {
                       primary: const Color.fromARGB(255, 131, 202, 212)),
                   child: FittedBox(
                     child: Text(
-                      'Log In',
+                      'Login',
                       style: GoogleFonts.roboto(
                         textStyle: const TextStyle(
                             fontSize: 17,

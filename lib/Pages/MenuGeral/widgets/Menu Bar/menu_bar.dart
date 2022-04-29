@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'menu_itens.dart';
 
-class MenuBar extends StatelessWidget {
+class MenuBar extends StatefulWidget {
   const MenuBar({Key? key}) : super(key: key);
 
+  @override
+  State<MenuBar> createState() => _MenuBarState();
+}
+
+class _MenuBarState extends State<MenuBar> {
+  bool visivelUser = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -52,7 +57,6 @@ class MenuBar extends StatelessWidget {
             ],
           ),
           const Spacer(),
-
           MenuItem(
             onPress: () {},
             titulo: 'Simular',
@@ -65,21 +69,19 @@ class MenuBar extends StatelessWidget {
             onPress: () {},
             titulo: 'Sobre',
           ),
-         
-       const  SizedBox(width: 5,),
+          const SizedBox(
+            width: 5,
+          ),
           SizedBox(
             height: 38,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-              primary: Colors.yellow.shade800,
+                primary: Colors.yellow.shade800,
               ),
-              onPressed: () {
-                
-                
-              },
+              onPressed: () {},
               child: Text(
                 'Login'.toUpperCase(),
-                style:  const TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
                   color: Colors.white,
