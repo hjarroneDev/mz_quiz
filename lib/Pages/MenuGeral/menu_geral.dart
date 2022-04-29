@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/menu_bar.dart';
-
+import 'widgets/Menu Bar/menu_bar.dart';
+import 'widgets/User/login_register.dart';
 
 class MenuGeral extends StatelessWidget {
   const MenuGeral({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +12,17 @@ class MenuGeral extends StatelessWidget {
     return Container(
       height: size.height,
       width: size.width,
-      decoration: const  BoxDecoration(
-        image: DecorationImage(image: AssetImage("assets/images/6kd9jw.png"),
-        fit: BoxFit.cover
-        )  
+      decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("assets/images/6kd9jw.png"),
+              fit: BoxFit.cover)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: const [
+          MenuBar(),
+          UserForm(),
+        ],
       ),
-      child: Column(children:const [
-         MenuBar()
-      ],),
     );
   }
 }
-

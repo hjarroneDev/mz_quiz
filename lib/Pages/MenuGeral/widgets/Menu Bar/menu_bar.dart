@@ -52,38 +52,37 @@ class MenuBar extends StatelessWidget {
             ],
           ),
           const Spacer(),
+
           MenuItem(
             onPress: () {},
-            titulo: 'Menu',
+            titulo: 'Simular',
           ),
           MenuItem(
             onPress: () {},
-            titulo: 'Exames',
-          ),
-          MenuItem(
-            onPress: () {},
-            titulo: 'Contacto',
+            titulo: 'Categoria',
           ),
           MenuItem(
             onPress: () {},
             titulo: 'Sobre',
           ),
-          MenuItem(
-            onPress: () {},
-            titulo: 'Login',
-          ),
+         
+       const  SizedBox(width: 5,),
           SizedBox(
-            height: 40,
+            height: 38,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
               primary: Colors.yellow.shade800,
               ),
-              onPressed: () {},
+              onPressed: () {
+                
+                
+              },
               child: Text(
-                'Get Started'.toUpperCase(),
-                style: const TextStyle(
+                'Login'.toUpperCase(),
+                style:  const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
+                  color: Colors.white,
                 ),
               ),
             ),
