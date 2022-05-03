@@ -51,7 +51,17 @@ class _UserFormState extends State<UserForm> {
                         borderRadius: BorderRadius.circular(5.0),
                       ),
                       enabledBorder: const OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey, width: 0.0),
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 0.0,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.yellow.shade800,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(5.0),
                       ),
                     ),
                   ),
@@ -76,12 +86,24 @@ class _UserFormState extends State<UserForm> {
                     textAlignVertical: TextAlignVertical.bottom,
                     decoration: InputDecoration(
                       hintText: 'Password',
-                      hintStyle: GoogleFonts.roboto(color: Colors.black26),
+                      hintStyle: GoogleFonts.roboto(
+                        color: Colors.black26,
+                      ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
                       enabledBorder: const OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey, width: 0.0),
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 0.0,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.yellow.shade800,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(5.0),
                       ),
                     ),
                   ),
@@ -99,7 +121,7 @@ class _UserFormState extends State<UserForm> {
                       primary: const Color.fromARGB(255, 131, 202, 212)),
                   child: FittedBox(
                     child: Text(
-                      'Login',
+                      'Login'.toUpperCase(),
                       style: GoogleFonts.roboto(
                         textStyle: const TextStyle(
                             fontSize: 17,
