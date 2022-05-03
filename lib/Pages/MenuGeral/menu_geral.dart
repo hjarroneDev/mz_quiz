@@ -15,6 +15,7 @@ class _MenuGeralState extends State<MenuGeral> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+   
     return Container(
       height: size.height,
       width: size.width,
@@ -32,7 +33,7 @@ class _MenuGeralState extends State<MenuGeral> {
           ),
           const Padding(
             padding: EdgeInsets.only(top: 60),
-            child: UserForm(),
+            child: UserForm(visivel: true,),
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../User/login_register.dart';
 import 'menu_itens.dart';
 
 class MenuBar extends StatefulWidget {
@@ -78,7 +79,9 @@ class _MenuBarState extends State<MenuBar> {
               style: ElevatedButton.styleFrom(
                 primary: Colors.yellow.shade800,
               ),
-              onPressed: () {},
+              onPressed: () {
+
+              },
               child: Text(
                 'Login'.toUpperCase(),
                 style: const TextStyle(
