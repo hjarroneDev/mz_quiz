@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../User/login_register.dart';
 import 'menu_itens.dart';
 
 class MenuBar extends StatefulWidget {
@@ -58,17 +57,27 @@ class _MenuBarState extends State<MenuBar> {
             ],
           ),
           const Spacer(),
-          MenuItem(
-            onPress: () {},
-            titulo: 'Simular',
+          Container(
+            decoration: BoxDecoration(
+            borderRadius: const BorderRadius.all(Radius.circular(5)),
+            color: Colors.black12.withOpacity(0.03),
           ),
-          MenuItem(
-            onPress: () {},
-            titulo: 'Categoria',
-          ),
-          MenuItem(
-            onPress: () {},
-            titulo: 'Sobre',
+            child: Row(
+              children: [
+                MenuItem(
+                  onPress: () {},
+                  titulo: 'Simular',
+                ),
+                MenuItem(
+                  onPress: () {},
+                  titulo: 'Categoria',
+                ),
+                MenuItem(
+                  onPress: () {},
+                  titulo: 'Sobre',
+                ),
+              ],
+            ),
           ),
           const SizedBox(
             width: 5,
@@ -79,9 +88,7 @@ class _MenuBarState extends State<MenuBar> {
               style: ElevatedButton.styleFrom(
                 primary: Colors.yellow.shade800,
               ),
-              onPressed: () {
-
-              },
+              onPressed: () {},
               child: Text(
                 'Login'.toUpperCase(),
                 style: const TextStyle(

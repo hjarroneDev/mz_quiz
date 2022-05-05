@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/Conteudo/conteudo.dart';
 import 'widgets/Menu Bar/menu_bar.dart';
+import 'widgets/Rodape/rodape.dart';
 import 'widgets/User/login_register.dart';
 
 class MenuGeral extends StatefulWidget {
-  
   const MenuGeral({Key? key}) : super(key: key);
 
   @override
@@ -15,7 +16,7 @@ class _MenuGeralState extends State<MenuGeral> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-   
+
     return Container(
       height: size.height,
       width: size.width,
@@ -29,11 +30,17 @@ class _MenuGeralState extends State<MenuGeral> {
           Column(
             children: const [
               MenuBar(),
+              Expanded(
+                child: BodyPage(),
+              ),
+              RodapePage(),
             ],
           ),
           const Padding(
             padding: EdgeInsets.only(top: 60),
-            child: UserForm(visivel: true,),
+            child: UserForm(
+              visivel: false,
+            ),
           ),
         ],
       ),
