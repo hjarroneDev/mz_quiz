@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'Pages/MenuGeral/menu_geral.dart';
 
 void main() => runApp(const MyApp());
